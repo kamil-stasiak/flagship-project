@@ -1,4 +1,4 @@
-package me.stasiak.flagship.list
+package me.stasiak.flagship.examples
 
 import net.jqwik.api.ForAll
 import net.jqwik.api.Property

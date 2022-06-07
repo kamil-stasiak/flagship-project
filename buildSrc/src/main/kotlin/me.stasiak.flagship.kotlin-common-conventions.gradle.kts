@@ -65,6 +65,11 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform {
-        includeEngines("jqwik") // (jqwik)
+//        includeEngines("jqwik") // (jqwik)
+//        include("**/*Properties.class")
+//        include("**/*Example.class")
+//        include("**/*Examples.class")
+//        include("org/**/*Test.class")
+//        include("**/*Tests.class")
     }
 }

@@ -6,6 +6,7 @@
 
 plugins {
     id("me.stasiak.flagship.kotlin-library-conventions")
+    id("me.stasiak.flagship.kotlin-postgres-conventions")
 }
 
 dependencies {

@@ -2,7 +2,7 @@
 
 Tests
 
-- [ ] testContainers
+- [x] testContainers
 - [ ] mutation testing
 - [x] property based testing
   - https://johanneslink.net/property-based-testing-in-kotlin/

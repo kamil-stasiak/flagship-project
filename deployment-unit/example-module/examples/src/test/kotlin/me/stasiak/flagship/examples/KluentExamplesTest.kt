@@ -1,4 +1,4 @@
-package me.stasiak.flagship.list
+package me.stasiak.flagship.examples
 
 import org.amshove.kluent.`should not be`
 import org.junit.jupiter.api.Test
