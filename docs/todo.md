@@ -10,12 +10,18 @@ Tests
 - [ ] model based testing
 - [ ] kover
 
+Db
+- [ ] test containers outside test (in development, like postgres, kafka)
+- [ ] connection pool
+- [ ] transactions
+
   Architecture
 
 - [ ] modular monolith
 - [ ] hexagonal modules
 - [x] gradle modules separations
 - [ ] event sourcing
+- [ ] many entry points: http (ktor, spring, quarkus), CLI
 
   Arrow
 
@@ -27,9 +33,12 @@ Tests
   Other
 
 - [x] context receivers
-- [ ] ktor
+- [x] ktor (auto reload)
+- [ ] quarkus (livereload)
 - [ ] SQLDelight
 - [ ] Jooq
 - [ ] ktlint (or something like that)
 - [ ] detekt (static code analysis tool https://github.com/detekt/detekt)
 - [ ] value classes instead of String in ids
+- [ ] kotlin native (eg. ktor) - kotlin multiplatform plugin instead kotlin jvm
+

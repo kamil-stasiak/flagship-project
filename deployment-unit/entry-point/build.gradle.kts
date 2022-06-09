@@ -5,13 +5,18 @@
  */
 
 plugins {
-    id("me.stasiak.flagship.kotlin-application-conventions")
+    id("application-conventions")
+    id("ktor-conventions")
 }
 
 dependencies {
     implementation("org.apache.commons:commons-text")
-    implementation(project(":deployment-unit:example-module:application"))
-    implementation(project(":deployment-unit:example-module:examples"))
+
+    implementation(project(":deployment-unit:user-module:application"))
+    implementation(project(":deployment-unit:user-module:interfaces"))
+    implementation(project(":deployment-unit:user-module:domain"))
+
+    implementation(project(":deployment-unit:examples"))
 }
 
 application {

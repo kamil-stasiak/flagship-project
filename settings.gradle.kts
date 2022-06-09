@@ -12,7 +12,9 @@ rootProject.name = "flagship-project"
 include(
     "deployment-unit:entry-point",
 
-    "deployment-unit:example-module:domain",
-    "deployment-unit:example-module:application",
-    "deployment-unit:example-module:examples",
+    "deployment-unit:user-module:domain",
+    "deployment-unit:user-module:application",
+    "deployment-unit:user-module:interfaces",
+
+    "deployment-unit:examples",
 )
