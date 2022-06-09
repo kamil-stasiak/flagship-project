@@ -7,8 +7,26 @@
 plugins {
     id("library-conventions")
     id("postgres-conventions")
+    id("com.squareup.sqldelight") version "1.5.3"
 }
 
 dependencies {
     api(project(":deployment-unit:user-module:domain"))
+
+    implementation("com.squareup.sqldelight:jdbc-driver:1.5.3")
+    implementation("com.squareup.sqldelight:sqlite-driver:1.5.3")
+    implementation("com.squareup.sqldelight:gradle-plugin:1.5.3")
+
+    implementation("com.zaxxer:HikariCP:5.0.1")
+}
+
+sqldelight {
+    database("ExampleDatabase") {
+        packageName = "com.example.db"
+        sourceFolders = listOf("sqldelight")
+//        dependency project(':OtherProject')
+//        deriveSchemaFromMigrations = true
+//        migrationOutputDirectory = file("$buildDir/resources/main/migrations")
+//        migrationOutputFileFormat = ".sql"
+    }
 }

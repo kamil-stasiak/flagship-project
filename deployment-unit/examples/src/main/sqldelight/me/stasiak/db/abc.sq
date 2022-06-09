@@ -1,0 +1,14 @@
+createTable:
+CREATE TABLE users (
+  id text,
+  username text,
+  email text
+);
+
+selectAll:
+SELECT *
+FROM users;
+
+insertObject:
+INSERT INTO users(id, username, email)
+VALUES ?;
