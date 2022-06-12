@@ -9,5 +9,4 @@ plugins {
 }
 
 dependencies {
-    api(project(":deployment-unit:user-module:application"))
 }

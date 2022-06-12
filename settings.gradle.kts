@@ -10,11 +10,18 @@
 
 rootProject.name = "flagship-project"
 include(
-    "deployment-unit:entry-point",
+    "deployment-unit:common:errors",
 
+    "deployment-unit:common:ktor",
     "deployment-unit:user-module:domain",
     "deployment-unit:user-module:application",
-    "deployment-unit:user-module:interfaces",
+    "deployment-unit:user-module:interfaces-ktor",
+
+    "deployment-unit:article-module:interfaces-ktor",
+
+    "deployment-unit:profile-module:interfaces-ktor",
 
     "deployment-unit:examples",
+
+    "deployment-unit:entry-point",
 )

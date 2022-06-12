@@ -13,12 +13,12 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import java.sql.DriverManager
 import java.util.*
 
-@Testcontainers
+//@Testcontainers
 class SqlDelightExamplesTest {
-    @Container
+//    @Container
     private val pgContainer = PostgreSQLContainer<Nothing>("postgres:14.3")
 
-    @Test
+//    @Test
     fun `postgres container return postgres version`() {
         val dataSource = HikariDataSource().apply {
             username = pgContainer.username

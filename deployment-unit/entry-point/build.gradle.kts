@@ -12,9 +12,18 @@ plugins {
 dependencies {
     implementation("org.apache.commons:commons-text")
 
-    implementation(project(":deployment-unit:user-module:application"))
-    implementation(project(":deployment-unit:user-module:interfaces"))
-    implementation(project(":deployment-unit:user-module:domain"))
+    // elements order matters
+    implementation(project(":deployment-unit:common:errors"))
+    implementation(project(":deployment-unit:common:ktor"))
+
+//    implementation(project(":deployment-unit:user-module:domain"))
+//    implementation(project(":deployment-unit:user-module:application"))
+
+    implementation(project(":deployment-unit:user-module:interfaces-ktor"))
+
+    implementation(project(":deployment-unit:article-module:interfaces-ktor"))
+
+    implementation(project(":deployment-unit:profile-module:interfaces-ktor"))
 
     implementation(project(":deployment-unit:examples"))
 }

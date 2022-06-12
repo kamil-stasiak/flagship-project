@@ -9,6 +9,8 @@ repositories {
 }
 
 dependencies {
+    val kotlin_version: String by project
+    val kotlin_serialization_version: String by project
     val jqwik_version: String by project
     val arrow_version: String by project
     val kluent_version: String by project
@@ -25,13 +27,11 @@ dependencies {
     }
 
     // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("org.jetbrains.kotlin:kotlin-bom:$kotlin_version")
+//    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinx_coroutines_version}")
 
@@ -49,6 +49,8 @@ dependencies {
 //    implementation("org.slf4j:slf4j-api:${sl4j_version}")
 //    implementation("org.slf4j:slf4j-simple:${sl4j_version}")
 
+    implementation("org.jetbrains.kotlin:kotlin-serialization:$kotlin_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialization_version")
 }
 
 testing {
@@ -81,5 +83,16 @@ tasks.withType<Test> {
 //        include("**/*Examples.class")
 //        include("org/**/*Test.class")
 //        include("**/*Tests.class")
+    }
+}
+
+val jar: Jar by tasks
+jar.apply {
+    doFirst {
+        val name = project.path
+            .substringAfter(":")
+            .substringAfter(":")
+            .replace(":", "-")
+        archiveBaseName.set(name)
     }
 }

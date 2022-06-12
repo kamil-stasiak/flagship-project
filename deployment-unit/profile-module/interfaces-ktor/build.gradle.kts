@@ -5,10 +5,8 @@
  */
 
 plugins {
-    id("library-conventions")
+    id("ktor-conventions")
 }
 
 dependencies {
-    api(project(":deployment-unit:user-module:domain"))
-    api(project(":deployment-unit:common:errors"))
 }

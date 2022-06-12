@@ -7,12 +7,12 @@ import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
 import java.sql.DriverManager
 
-@Testcontainers
+//@Testcontainers
 class TestContainersExamplesTest {
-    @Container
+//    @Container
     private val pgContainer = PostgreSQLContainer<Nothing>("postgres:14.3")
 
-    @Test
+//    @Test
     fun `postgres container return postgres version`() {
         // get the connection
         val connection = DriverManager

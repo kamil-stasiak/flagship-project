@@ -7,7 +7,7 @@ import org.amshove.kluent.`should contain all`
 
 class PBTExamplesTest {
 
-    @Property
+//    @Property
     fun `reversing keeps all elements`(@ForAll list: List<Int>) {
         val reversed = list.reversed()
         reversed `should contain all` list

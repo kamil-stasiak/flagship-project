@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 
 
 class KluentExamplesTest {
-    @Test
+//    @Test
     fun `kluent method with space in name works in junit5`() {
         val emptyList = emptyList<String>()
 
